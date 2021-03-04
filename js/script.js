@@ -26,7 +26,7 @@ function main() {
 }
 
 function searchLocation(location) {
-  const apiKey = ''; // inserir API
+  const apiKey = '0d571b1017b8214d63acaf9778ec017b';
   const weatherFetch = fetch(
     `http://api.openweathermap.org/data/2.5/weather?q=${location}&lang=pt_br&units=metric&appid=${apiKey}`,
   );

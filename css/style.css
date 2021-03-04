@@ -35,6 +35,7 @@ h2.temperature {
 
 h3 {
   font-size: 1.8rem;
+  font-weight: 300;
 }
 
 p,
@@ -88,6 +89,10 @@ h2.description {
 
 .state {
   margin: 4rem 0;
+}
+
+img.weather-icon {
+  width: 200px;
 }
 
 .content:not(2) {
@@ -151,7 +156,7 @@ h2.description {
 .highlights h3 {
   display: block;
   width: 100%;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .box-highlights {
@@ -163,5 +168,14 @@ h2.description {
 }
 
 h1.info {
+  margin-top: 1rem;
   font-size: 4rem;
+  display: inline-block;
+}
+
+small {
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 0.5rem;
 }

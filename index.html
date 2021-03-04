@@ -16,11 +16,11 @@
     <section class="primary">
         <div class="container">
             <form class="search">
-                <input type="text" placeholder="Lugares..." id="inputSearch">
+                <input type="text" placeholder="Lugares..." id="inputSearch" value="Fortaleza">
                 <button class="btn-search">Pesquisar</button>
             </form> <!-- search -->
             <main class="content">
-                <img class="weather-icon" id="icon" src="img/Shower.png" alt="Icon">
+                <img class="weather-icon" id="weather-icon" src="img/Shower.png" alt="Icon">
                 <h1 class="temperature" id="temperature">15ºC</h1>
                 <h2 class="description" id="description">Shower</h2>
                 <div class="date">
@@ -41,7 +41,7 @@
             <div class="forecast">
                 <div class="box-forecast">
                     <p>Hoje</p>
-                    <img src="img/Thunderstorm.png" alt="Icon">
+                    <img class="weather-icon" src="img/Thunderstorm.png" alt="Icon">
                     <div>
                         <span class="max">16ºC</span>
                         <span class="min">11ºC</span>
@@ -83,22 +83,26 @@
             </div> <!-- forecast -->
 
             <div class="highlights">
-                <h3>Today's Highlights</h3>
-                <div class="box-highlights">
-                    <p>Wind status</p>
-                    <h1 class="info">Testing</h1>
+                <h3>Outras informações</h3>
+                <div class="box-highlights wind-status">
+                    <p>Ventos</p>
+                    <h1 class="info">0.00</h1>
+                    <small>m/s</small>
                 </div>
-                <div class="box-highlights">
-                    <p>Humidity</p>
-                    <h1 class="info">Testing</h1>
+                <div class="box-highlights humidity">
+                    <p>Umidade</p>
+                    <h1 class="info">0</h1>
+                    <small>%</small>
                 </div>
-                <div class="box-highlights">
-                    <p>Visibility</p>
-                    <h1 class="info">Testing</h1>
+                <div class="box-highlights visibility">
+                    <p>Visibilidade</p>
+                    <h1 class="info">0</h1>
+                    <small>Km</small>
                 </div>
-                <div class="box-highlights">
-                    <p>Air Pressure</p>
-                    <h1 class="info">Testing</h1>
+                <div class="box-highlights air-pressure">
+                    <p>Pressão atmosférica</p>
+                    <h1 class="info">0</h1>
+                    <small>hPa</small>
                 </div>
             </div>
         </div> <!-- container -->

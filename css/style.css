@@ -10,17 +10,16 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 0 2%;
 }
 
 input,
 button {
   font-size: 1.2rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   outline: none;
-  border: none;
-  font-weight: 700;
 }
 
 h1.temperature {
@@ -47,30 +46,46 @@ span {
 
 .primary {
   width: 30%;
-  height: 100vh;
   background: #1e213a;
   color: #a09fb1;
-  padding: 2rem;
+  padding-top: 1.5rem;
 }
 
-.search {
+form.search {
   display: flex;
-  justify-content: center;
+  width: 100%;
   margin-bottom: 8rem;
+  justify-content: center;
+}
+
+.icon-search {
+  width: 20px;
+  position: relative;
+  left: 2.3rem;
 }
 
 .search > input {
-  width: 60%;
-  padding: 0.8rem;
+  width: 100%;
+  padding: 0.8rem 3rem;
+  padding-right: 0;
+  background: none;
+  border: 1px solid white;
+  color: #a09fb1;
 }
 
 .search > button {
-  background: #6e707a;
-  outline: none;
+  background: #3c47e9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
   color: white;
   padding: 0 1rem;
   cursor: pointer;
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+
+.content {
+  text-align: center;
 }
 
 h2.description {
@@ -114,43 +129,21 @@ img.weather-icon {
   height: 100vh;
   background: #100e1d;
   color: white;
-  padding-top: 6rem;
-}
-
-.forecast {
-  display: flex;
-  justify-content: center;
-}
-
-.box-forecast {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 9rem;
-  height: 12rem;
-  background: #1e213a;
   padding: 1rem 0;
-  margin: 0 2rem;
 }
 
-.box-forecast img {
-  width: 80px;
-  margin: 1rem 0;
-}
-
-.box-forecast span {
-  margin: 0 0.4rem;
-}
-
-.box-forecast div span:last-child {
-  color: #a09fb1;
+.secondary > .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .highlights {
-  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .highlights h3 {
@@ -165,6 +158,7 @@ img.weather-icon {
   width: 30rem;
   height: 12rem;
   padding: 2rem 0;
+  text-align: center;
 }
 
 h1.info {
@@ -178,4 +172,88 @@ small {
   font-weight: 300;
   font-style: italic;
   margin-left: 0.5rem;
+}
+
+small + h1 {
+  margin-left: 3rem;
+}
+
+.min-today,
+.min-today + small {
+  color: #a09fb1;
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  display: inline-block;
+}
+
+footer a {
+  color: white;
+}
+
+/**************** MEDIA QUERIES ******************/
+
+@media screen and (max-width: 1540px) {
+  .box-highlights {
+    width: 22rem;
+    height: 10rem;
+    margin: 1.2rem;
+    padding: 2rem 0;
+  }
+  .primary {
+    width: 40%;
+  }
+
+  .secondary {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .box-highlights {
+    width: 18rem;
+    height: 8rem;
+    margin: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  h1.info {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    flex-direction: column;
+  }
+
+  .primary {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .secondary {
+    width: 100%;
+    height: 100%;
+  }
+
+  form.search > input {
+    width: 60%;
+  }
+
+  .box-highlights {
+    width: 60%;
+    height: 15rem;
+    font-size: 200%;
+    margin: 2rem 0;
+    padding: 2rem 0;
+  }
+
+  h1.info {
+    font-size: 4rem;
+  }
 }

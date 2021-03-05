@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -12,78 +12,45 @@
 </head>
 
 <body>
-
     <section class="primary">
         <div class="container">
             <form class="search">
-                <input type="text" placeholder="Lugares..." id="inputSearch" value="Fortaleza">
+                <img class="icon-search" src="img/search-solid.svg" alt="">
+                <input type="text" placeholder="pesquise lugares" id="inputSearch">
                 <button class="btn-search">Pesquisar</button>
             </form> <!-- search -->
             <main class="content">
                 <img class="weather-icon" id="weather-icon" src="img/Shower.png" alt="Icon">
                 <h1 class="temperature" id="temperature">15ºC</h1>
-                <h2 class="description" id="description">Shower</h2>
+                <h2 class="description" id="description">Nublado</h2>
                 <div class="date">
                     <span>Hoje</span>
                     <span>•</span>
-                    <span class="current-date">Fri, 5 jun</span>
+                    <span class="current-date"></span>
                 </div>
                 <div class="location">
                     <img class="location-icon" src="img/location.svg" alt="Ícone">
-                    <span class="locale" id="locale">Helsinki</span>
+                    <span class="locale" id="locale">Londres</span>
                 </div>
             </main> <!-- content -->
         </div> <!-- container -->
-    </section> <!-- left -->
+    </section> <!-- primary -->
 
     <section class="secondary">
         <div class="container">
-            <div class="forecast">
-                <div class="box-forecast">
-                    <p>Hoje</p>
-                    <img class="weather-icon" src="img/Thunderstorm.png" alt="Icon">
-                    <div>
-                        <span class="max">16ºC</span>
-                        <span class="min">11ºC</span>
-                    </div>
-
-                </div> <!-- box-forecast -->
-                <div class="box-forecast">
-                    <p>Tomorrow</p>
-                    <img src="img/Thunderstorm.png" alt="Icon">
-                    <div>
-                        <span class="max">16ºC</span>
-                        <span class="min">11ºC</span>
-                    </div>
-                </div> <!-- box-forecast -->
-                <div class="box-forecast">
-                    <p>Tomorrow</p>
-                    <img src="img/Thunderstorm.png" alt="Icon">
-                    <div>
-                        <span class="max">16ºC</span>
-                        <span class="min">11ºC</span>
-                    </div>
-                </div> <!-- box-forecast -->
-                <div class="box-forecast">
-                    <p>Tomorrow</p>
-                    <img src="img/Thunderstorm.png" alt="Icon">
-                    <div>
-                        <span class="max">16ºC</span>
-                        <span class="min">11ºC</span>
-                    </div>
-                </div> <!-- box-forecast -->
-                <div class="box-forecast">
-                    <p>Tomorrow</p>
-                    <img src="img/Thunderstorm.png" alt="Icon">
-                    <div>
-                        <span class="max">16ºC</span>
-                        <span class="min">11ºC</span>
-                    </div>
-                </div> <!-- box-forecast -->
-            </div> <!-- forecast -->
-
             <div class="highlights">
-                <h3>Outras informações</h3>
+                <div class="box-highlights feels-like">
+                    <p>Sensação Térmica</p>
+                    <h1 class="info">0</h1>
+                    <small>ºC</small>
+                </div>
+                <div class="box-highlights max-min">
+                    <p>Máxima e Mínima</p>
+                    <h1 class="info max-today">0</h1>
+                    <small>ºC</small>
+                    <h1 class="info min-today">0</h1>
+                    <small>ºC</small>
+                </div>
                 <div class="box-highlights wind-status">
                     <p>Ventos</p>
                     <h1 class="info">0.00</h1>
@@ -104,9 +71,13 @@
                     <h1 class="info">0</h1>
                     <small>hPa</small>
                 </div>
-            </div>
+            </div> <!-- highlights -->
+            <footer>
+                <p>created by </p>
+                <a href="https://github.com/danielfilh0" target="_blank">danielfilh0</a>
+            </footer>
         </div> <!-- container -->
-    </section> <!-- right -->
+    </section> <!-- secondary -->
 
     <script src="js/script.js"></script>
 </body>

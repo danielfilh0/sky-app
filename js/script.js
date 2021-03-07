@@ -27,7 +27,7 @@ function main() {
 function searchLocation(location) {
   const apiKey = ''; // insert API
   const weatherFetch = fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${location}&lang=pt_br&units=metric&appid=${apiKey}`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=pt_br&units=metric&appid=${apiKey}`,
   );
   weatherFetch
     .then((r) => r.json())

@@ -7,13 +7,8 @@
 
 body {
   display: flex;
-}
-
-.container {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  padding: 0 2%;
+  justify-content: center;
+  background-color: #1e213a;
 }
 
 input,
@@ -23,7 +18,7 @@ button {
 }
 
 h1.temperature {
-  font-size: 8rem;
+  font-size: 5.6rem;
   font-weight: normal;
 }
 
@@ -46,15 +41,24 @@ span {
 
 .primary {
   width: 30%;
+  min-height: 100%;
   background: #1e213a;
   color: #a09fb1;
-  padding-top: 1.5rem;
+  padding: 1.5rem 0;
+  padding-bottom: 1.5rem;
+}
+
+.primary.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 form.search {
   display: flex;
   width: 100%;
-  margin-bottom: 8rem;
+  margin-bottom: 6.8rem;
   justify-content: center;
 }
 
@@ -102,10 +106,6 @@ h2.description {
   width: 18px;
 }
 
-.state {
-  margin: 4rem 0;
-}
-
 img.weather-icon {
   width: 200px;
 }
@@ -126,7 +126,7 @@ img.weather-icon {
 
 .secondary {
   width: 70%;
-  height: 100vh;
+  min-height: 100%;
   background: #100e1d;
   color: white;
   padding: 1rem 0;
@@ -157,7 +157,7 @@ img.weather-icon {
   margin: 1rem;
   width: 30rem;
   height: 12rem;
-  padding: 2rem 0;
+  padding: 2rem 2%;
   text-align: center;
 }
 
@@ -204,6 +204,10 @@ footer a {
     margin: 1.2rem;
     padding: 2rem 0;
   }
+
+  img.weather-icon {
+    width: 100px;
+  }
   .primary {
     width: 40%;
   }
@@ -221,12 +225,23 @@ footer a {
     padding: 1rem 0;
   }
 
+  h1.temperature {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
   h1.info {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 950px) {
+  * {
+    font-size: 98.3%;
+  }
   body {
     flex-direction: column;
   }
@@ -252,8 +267,26 @@ footer a {
     margin: 2rem 0;
     padding: 2rem 0;
   }
+}
 
-  h1.info {
-    font-size: 4rem;
+@media screen and (max-height: 700px) {
+  input,
+  button {
+    font-size: 98%;
+  }
+
+  .box-highlights {
+    width: 15rem;
+  }
+
+  .box-highlights small {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-height: 569px) {
+  form.search {
+    margin-bottom: 4rem;
   }
 }
